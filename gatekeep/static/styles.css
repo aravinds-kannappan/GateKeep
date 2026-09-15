@@ -285,21 +285,23 @@ html, body {
 .dag {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.45rem;
+  gap: 0.55rem;
   align-items: center;
-  min-height: 4.5rem;
-  padding: 0.7rem;
-  border: 1px dashed var(--line);
-  border-radius: 0.8rem;
-  background: #f8faf8;
+  min-height: 5.5rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 0.9rem;
+  background:
+    linear-gradient(180deg, #fbfcfb, #f3f7f4);
 }
 .dag-node {
   font-family: var(--mono);
-  font-size: 0.75rem;
-  padding: 0.55rem 0.7rem;
-  border-radius: 0.65rem;
+  font-size: 0.78rem;
+  padding: 0.7rem 0.85rem;
+  border-radius: 0.7rem;
   border: 1px solid var(--line);
   background: white;
+  box-shadow: 0 1px 0 rgba(20,32,28,0.04);
 }
 .dag-node.human {
   background: var(--accent-soft);

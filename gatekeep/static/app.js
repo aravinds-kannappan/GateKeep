@@ -1,7 +1,11 @@
 (() => {
   let sessionId = null;
 
-  const $ = (id) => document.getElementById(id);
+  const $ = (id) => {
+    const el = document.getElementById(id);
+    if (!el) throw new Error(`Missing DOM element #${id}`);
+    return el;
+  };
   const num = (v) => {
     const n = Number(v);
     return Number.isFinite(n) ? n : 0;
