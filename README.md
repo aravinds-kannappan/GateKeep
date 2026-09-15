@@ -117,6 +117,7 @@ score
 quit
 ```
 
+Ticket IDs in the default episode: `CHG-1001` … `CHG-1004`. CAB node id: `cab`.
 ---
 
 ## Why this maps to Goodhart
