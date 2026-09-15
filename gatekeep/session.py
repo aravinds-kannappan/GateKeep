@@ -60,12 +60,16 @@ class EpisodeSession:
 
     def view(self, extra: dict[str, Any] | None = None) -> dict[str, Any]:
         world = self.env.domain.public_view(self.env.world) if self.env.world else {}
+        vec = None
+        if isinstance(self.obs, dict) and "vec" in self.obs:
+            raw = self.obs["vec"]
+            vec = raw.tolist() if hasattr(raw, "tolist") else list(raw)
         out = {
             "session_id": self.id,
             "condition_id": self.condition_id,
             "config": self.env.config.to_dict(),
             "world": world,
-            "obs": self.obs,
+            "obs": {"vec": vec} if vec is not None else self.obs,
             "agent_obs": (self.info or {}).get("rich"),
             "info": {
                 k: v
