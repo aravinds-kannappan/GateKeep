@@ -357,6 +357,7 @@
     $("proxyRet").textContent = num(data.proxy_return).toFixed(2);
     $("trueRet").textContent = num(data.true_return).toFixed(2);
     $("gapRet").textContent = num(data.goodhart_gap).toFixed(2);
+    $("tRet").textContent = `${data.n_steps ?? data.t ?? 0} / ${config.horizon || 32}`;
     if (data.scores) setScores(data.scores);
   }
 
