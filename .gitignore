@@ -16,3 +16,5 @@ logs/
 artifacts/*.mp4
 !artifacts/.gitkeep
 !artifacts/*.pdf
+
+!artifacts/gatekeep_live_demo_replay_web_trimmed.mp4
